@@ -4,6 +4,12 @@ body{
     margin: 0;
     font-family: "Inter Tight", sans-serif;
 }
+#menu-btn{
+   display: none;
+}
+.cart{
+    display: none;
+}
 nav{
     display: flex;
     align-items: center;
@@ -12,11 +18,17 @@ nav{
     height: 10vh;
     border-bottom: 2px;
 }
-.menu{
-    vertical-align: middle;
+.menu-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
     
 }
-.menu:hover{
+.menu-btn svg{
+    vertical-align: middle;
+}
+.menu-btn:hover{
     background-color: white;
 }
 nav div{
@@ -103,4 +115,94 @@ h1{
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+}
+.menu{
+    display: none;
+}
+
+
+@media (width <= 950px){
+    nav input:checked ~ .menu{
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    background-color: black;
+    }
+    nav{
+        display: flex;
+        flex-direction: row-reverse;
+        border: 0;
+        height: 10vh;
+        border-bottom: 2px;
+    }
+    .cart{
+        display: flex;
+    }
+    .Subscribe{
+        display: none;
+    }
+    nav div{
+        height: 100%;
+        border: 0 ;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    header{
+        display: none;
+    }
+    
+    nav h1{
+        padding-left: 0px;
+        margin-left: 0;
+    }
+    main{
+        flex-direction: column-reverse;
+    }
+    main img{
+        width: 90vw;
+    }
+    .cards-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .cards-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .cards-3 img{
+        display: none;
+    }
+    .staff{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width <= 500px) {
+    .cards-1{
+        display: flex;
+        flex-direction: column;
+    }
+    .cards-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .staff{
+        display: flex;
+        flex-direction: column;
+        animation: smooth 1s ;
+        animation-timeline: scroll(90%);
+    }
+    
+}
+
+@keyframes smooth {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
