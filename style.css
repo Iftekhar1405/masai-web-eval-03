@@ -4,7 +4,7 @@ body{
     margin: 0;
     font-family: "Inter Tight", sans-serif;
 }
-#menu-btn{
+#menu-btns{
    display: none;
 }
 .cart{
@@ -17,6 +17,8 @@ nav{
     border: 1px solid gray ;
     height: 10vh;
     border-bottom: 2px;
+    animation: smooth 1s ;
+    animation-timeline: view(90vh);
 }
 .menu-btn{
     display: flex;
@@ -56,6 +58,8 @@ header{
     justify-content: center;
     padding: 20px;
     border: 1px solid rgb(175, 175, 175) ;
+    animation: smooth 1s ;
+    animation-timeline: view(90vh);
 }
 header div{
     width: 100px;
@@ -66,6 +70,8 @@ main {
     justify-content: space-between;
     padding: 20px;
     line-height: 25px;
+    animation: smooth 1s ;
+    animation-timeline: view(90vh);
 }
 main h1{
     line-height: 50px;
@@ -92,6 +98,8 @@ main div button{
     line-height: 25px;
     padding: 20px;
     margin-bottom: 200px;
+    animation: smooth 1s ;
+    animation-timeline: view(90vh);
 }
 h3{
     font-weight: normal;
@@ -105,6 +113,8 @@ h1{
     padding: 20px;
     margin: 20px;
     margin-bottom: 200px;
+    animation: smooth 1s ;
+    animation-timeline: view(90vh);
 }
 .staff div img{
     width: 90%;
@@ -115,6 +125,8 @@ h1{
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+    animation: smooth 1s ;
+    animation-timeline: view(90vh);
 }
 .menu{
     display: none;
@@ -190,8 +202,14 @@ h1{
     .staff{
         display: flex;
         flex-direction: column;
+        
+    }
+    .staff div{
         animation: smooth 1s ;
-        animation-timeline: scroll(90%);
+        animation-timeline: view(90vh);
+    }
+    main{
+        animation: smooth 1s ;
     }
     
 }
